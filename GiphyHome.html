@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gif Genereator | SMU Project </title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Saira|Saira+Condensed|Sedgwick+Ave+Display|Slabo+27px">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="GiphyJS.js"></script>
+
+</head>
+
+	<body>
+
+		<header>
+
+			<nav class="navbar navbar-light bg-light">
+				
+				  <span class="h1 head-title" class="navbar-brand mb-0">Random Gif Generator</span>
+
+				<ul class="nav justify-content-end">
+				
+					  <li class="nav-item">
+				
+						    <a class="nav-link active" href="#">Home</a>
+					
+					  </li>
+				
+					  <li class="nav-item">
+				
+						    <a class="nav-link" href="#">About</a>
+				
+					  </li>
+				
+					  <li class="nav-item">
+				
+					   		<a class="nav-link" href="#">Contact</a>
+				
+					  </li>
+				
+				</ul>
+			
+			</nav>
+
+		</header>
+
+	<div class="container">
+			<div class="col-lg-12">
+				<div class="jumbotron">
+					
+					<div class="row" id="main-title">
+						
+						<h1>Search For anything, or Click a button!</h1>
+
+					</div>
+
+				<div class="row">
+
+					<div class="col-lg-8">
+
+						<div class="input-group" id="search-input">
+					      
+					 	     <input type="text" id="search-bar" class="form-control" placeholder="Search for..." aria-label="Search for...">
+						  
+						      <span class="input-group-btn">
+						  
+						    	    <a href="#"><button class="btn btn-secondary" id="search-button" type="button">Go!</button></a>
+						  
+						      </span>
+				    	</div>
+					
+					</div>
+
+				<div class="col-lg-4">
+					
+					<div class="card" id="card" style="width: 20rem;">
+						  
+								  <ul class="list-group list-group-flush">
+								  
+								    <li class="list-group-item btn" id="choices" value="Dog"><span value="Dog"><a href="#" id="dog">Dog</a></span></li>
+								  
+								    <li class="list-group-item btn" id="choices" value="Cat"><span value="Cat"><a href="#" id="dog">Cat</a></span></li>
+								  
+								    <li class="list-group-item btn" id="choices"><span value="Elephant"><a href="#" id="dog">Elephant</a></span></li>
+								  
+								  </ul>
+
+				 		</div>	
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12" id="display-gifs">
+
+				
+
+			</div>
+
+
+		</div>	
+	</div>
+
+
+</body>
+
+
+
+
+
+
+
+</html>

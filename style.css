@@ -1,0 +1,36 @@
+body {
+	background: #FAFAFA;
+}
+
+h1 {
+	text-align: center;
+	padding: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	color: #FAFAFA;
+	font-family: 'Oswald';
+}
+
+header {
+	font-family: 'Saira';
+	font-style: normal;
+  	font-weight: 400;
+}
+
+img {
+	height: 200px;
+	width: 200px;
+	margin: 5px;
+}
+
+.jumbotron {
+	background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/footer_lodyas.png);
+	font-family: 'Oswald';
+
+}
+
+#search-input {
+	margin: 50px 0px 20px 0px;
+}
+
