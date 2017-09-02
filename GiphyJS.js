@@ -6,11 +6,17 @@ $( document ).ready(function() {
 var buttons = $("#card");
 var searchInput = $("input-group input").text();
 
-var buttonsArray = ["Dog", "Cat", "Bird"];
+var buttonsArray = ["Dog", "Cat", "Bird", "Elephant"];
 
 for (i = 0; i < buttonsArray.length; i++) {
 
-$(".choices").html(buttonsArray[i]);
+
+
+var cardCreate = '<li class="list-group-item btn choices">' + buttonsArray[i] + '</li>';
+
+var ulList = $("ul#cards");
+
+ulList.append(cardCreate);
 
 };
 
@@ -25,6 +31,12 @@ console.log("hello");
 var searchInput = $("input#search-bar.form-control").val();
 
 clickVal = searchInput;
+
+var cardCreate = '<li class="list-group-item btn choices">' + clickVal + '</li>';
+
+var ulList = $("ul#cards");
+
+ulList.append(cardCreate);
 
 $("#display-gifs").empty();
 
@@ -58,7 +70,7 @@ for (i=0; i<response.data.length; i++){
 
 //Pre loaded button click listener
 
-$("li#choices.list-group-item.btn").on("click" , (function(event) {
+$("li.list-group-item.btn.choices").on("click" , (function(event) {
 
 
 
@@ -66,7 +78,7 @@ console.log("hello");
 
 
 
-var searchInput = $("li#choices.list-group-item.btn").html();
+var searchInput = $("li.list-group-item.btn.choices").text();
 
 clickVal = searchInput;
 
