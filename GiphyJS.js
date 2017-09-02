@@ -1,22 +1,32 @@
 
 
 
+$( document ).ready(function() {
+
 var buttons = $("#card");
 var searchInput = $("input-group input").text();
 
+var buttonsArray = ["Dog", "Cat", "Bird"];
+
+for (i = 0; i < buttonsArray.length; i++) {
+
+$(".choices").html(buttonsArray[i]);
+
+};
+
 //Search input click listener. 
 
-$("a").on("click",(function() {
+$("button#search-button.btn.btn-secondary").on("click",(function(event) {
 
-
-console.log(searchInput.text());
+event.preventDefault();
 
 console.log("hello");
 
-//var searchInput = $("input-group input#search-bar").val();
+var searchInput = $("input#search-bar.form-control").val();
 
 clickVal = searchInput;
 
+$("#display-gifs").empty();
 
 $.ajax( {
 	url : "http://api.giphy.com/v1/gifs/search?q="+clickVal+"&api_key=07692635cf6a4aa5ab6034071169347c&limit=12",
@@ -48,16 +58,19 @@ for (i=0; i<response.data.length; i++){
 
 //Pre loaded button click listener
 
-$("input-group input#search-button").on("click",(function() {
+$("li#choices.list-group-item.btn").on("click" , (function(event) {
 
 
-console.log(searchInput.text());
 
 console.log("hello");
 
-//var searchInput = $("input-group input#search-bar").val();
+
+
+var searchInput = $("li#choices.list-group-item.btn").html();
 
 clickVal = searchInput;
+
+$("#display-gifs").empty();
 
 
 $.ajax( {
@@ -77,12 +90,10 @@ for (i=0; i<response.data.length; i++){
 	gifSection.append(incomingGifs);
 
 
-
-	//console.log(imgURL);
-
 	};
-
 
 })
 
 }));
+
+});
