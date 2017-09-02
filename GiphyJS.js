@@ -73,14 +73,12 @@ for (i=0; i<response.data.length; i++){
 $("li.list-group-item.btn.choices").on("click" , (function(event) {
 
 
-
-console.log("hello");
-
-
-
-var searchInput = $("li.list-group-item.btn.choices").text();
+var searchInput = $(this).text();
 
 clickVal = searchInput;
+
+
+console.log(searchInput);
 
 $("#display-gifs").empty();
 
