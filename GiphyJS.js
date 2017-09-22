@@ -32,6 +32,8 @@ var searchInput = $("input#search-bar.form-control").val();
 
 clickVal = searchInput;
 
+buttonsArray.push(searchInput);
+
 var cardCreate = '<li class="list-group-item btn choices">' + clickVal + '</li>';
 
 var ulList = $("ul#cards");
